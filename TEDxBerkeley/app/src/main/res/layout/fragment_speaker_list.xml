@@ -1,10 +1,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.tedxberkeley.www.tedxberkeley.Fragments.SpeakerListFragment">
+    tools:context="org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ListView
+        android:id="@+id/speaker_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        </ListView>
 
 </FrameLayout>

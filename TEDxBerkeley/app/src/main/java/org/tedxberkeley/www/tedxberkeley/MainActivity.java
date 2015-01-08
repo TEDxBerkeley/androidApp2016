@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.net.Uri;
 
-import org.tedxberkeley.www.tedxberkeley.Fragments.SpeakerListFragment;
+import org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment;
 
 
 public class MainActivity extends FragmentActivity implements SpeakerListFragment.OnFragmentInteractionListener {
