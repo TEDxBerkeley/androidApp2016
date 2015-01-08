@@ -22,5 +22,24 @@ public class Speaker {
         return mName;
     }
 
+    public String getSubTitle(){
+        return mSubTitle;
+    }
+
+    public String getDescription(){
+        return mDescription;
+    }
+
+    public void setName(String name){
+        mName = name;
+    }
+
+    public void setSubTitle(String subTitle){
+        mSubTitle = subTitle;
+    }
+
+    public void setDescription(String description){
+        mDescription = description;
+    }
 
 }

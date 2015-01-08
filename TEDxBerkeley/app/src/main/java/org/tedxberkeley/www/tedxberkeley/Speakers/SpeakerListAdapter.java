@@ -50,6 +50,7 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
         }
         Speaker speaker = mData.get(position);
         holder.name.setText(speaker.getName());
+        holder.subTitle.setText(speaker.getSubTitle());
         holder.description.setText(speaker.getDescription());
 
         return row;
