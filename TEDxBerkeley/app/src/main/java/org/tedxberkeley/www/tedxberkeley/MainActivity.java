@@ -39,6 +39,8 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        mAdapter = new TabsPagerAdapter(getSupportFragmentManager(), this); // Might not work with this
+
         initializeFragments();
         initializeTabs(0);
     }

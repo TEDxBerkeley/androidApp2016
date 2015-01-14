@@ -28,14 +28,28 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 
         switch (index) {
             case 0:
-                return SpeakerListFragment.newInstance();
-            case 1:
                 return ScheduleFragment.newInstance("Test", "1");
+            case 1:
+                return SpeakerListFragment.newInstance();
             case 2:
                 return AboutFragment.newInstance("Test", "2");
         }
 
         return null;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position){
+        switch (position) {
+            case 0:
+                return "Schedule";
+            case 1:
+                return "Speakers";
+            case 2:
+                return "About";
+            default:
+                return "None";
+        }
     }
 
     @Override
