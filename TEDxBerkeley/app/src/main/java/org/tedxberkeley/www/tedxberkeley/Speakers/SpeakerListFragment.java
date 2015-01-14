@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,7 @@ import org.tedxberkeley.www.tedxberkeley.R;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class SpeakerListFragment extends Fragment {
+public class SpeakerListFragment extends ListFragment {
 
     private ArrayList<Speaker> mSpeakers;
 
@@ -58,7 +59,7 @@ public class SpeakerListFragment extends Fragment {
 
         ArrayList<Speaker> speaker;
         View view =  inflater.inflate(R.layout.fragment_speaker_list, container, false);
-        mSpeakerListView = (ListView) view.findViewById(R.id.speaker_list_view);
+        mSpeakerListView = (ListView) view.findViewById(android.R.id.list);
         speaker = configureSpeakerList();
         mAdapter = new SpeakerListAdapter(mMainActivity, R.layout.speaker_row, speaker);
         mSpeakerListView.setAdapter(mAdapter);
@@ -74,6 +75,13 @@ public class SpeakerListFragment extends Fragment {
             throw new ClassCastException(activity.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id){
+        Speaker speakerSelected = this.mSpeakerList.get(position);
+        SpeakerFragment detailFragment = SpeakerFragment.newInstance(speakerSelected);
+        mMainActivity.replaceFragment(detailFragment);
     }
 
     @Override

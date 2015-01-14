@@ -4,7 +4,7 @@
     tools:context="org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment">
 
     <ListView
-        android:id="@+id/speaker_list_view"
+        android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
