@@ -9,7 +9,7 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="@dimen/abc_action_bar_default_height_material"
-        android:background="@color/black"
+        android:background="@color/ted_red"
         android:id = "@+id/toolbar"
         style="@style/MyActionBar"
         >

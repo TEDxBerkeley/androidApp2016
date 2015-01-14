@@ -3,6 +3,7 @@
     <!-- Margins -->
     <dimen name="standard_margin">16dp</dimen>
     <dimen name="tight_margin">12dp</dimen>
+    <dimen name="content_margin">70dp</dimen>
 
     <!-- Spacing -->
     <dimen name="standard_space">8dp</dimen>
@@ -11,8 +12,14 @@
     <dimen name="standard_button">40dp</dimen>
     <dimen name="large_button">48dp</dimen>
 
+    <!-- Text Sizing -->
+    <dimen name="text_standard">18sp</dimen>
+    <dimen name="text_large">22sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
 
 </resources>

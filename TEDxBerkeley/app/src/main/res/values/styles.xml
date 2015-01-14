@@ -11,7 +11,7 @@
         <!-- colorAccent is used as the default value for colorControlActivated
              which is used to tint widgets -->
         <item name="colorAccent">@color/ted_red</item>
-
+        <item name="android:textColor">@color/black</item>
         <item name="android:actionMenuTextColor">@color/white</item>
     </style>
 
@@ -21,7 +21,7 @@
     </style>
 
     <style name="ThemeOverlay.MyApp.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:textColorPrimary">@color/ted_red</item>
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 
 </resources>
