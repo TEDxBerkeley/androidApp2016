@@ -8,5 +8,6 @@
     <string name="about">About</string>
     <string name="speakers">Speakers</string>
     <string name="schedule">Schedule</string>
+    <string name="navigation_icon_description">TEDxBerkeley Logo</string>
 
 </resources>

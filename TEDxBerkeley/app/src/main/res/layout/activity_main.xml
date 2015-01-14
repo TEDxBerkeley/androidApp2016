@@ -8,23 +8,20 @@
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/ted_red"
         android:id = "@+id/toolbar"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        />
+        >
+    </android.support.v7.widget.Toolbar>
 
     <FrameLayout
-        android:orientation="vertical"
-        android:id = "@+id/container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
-
-    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+        android:orientation="vertical"
+        android:id="@+id/container">
+    </FrameLayout>
 
 </RelativeLayout>

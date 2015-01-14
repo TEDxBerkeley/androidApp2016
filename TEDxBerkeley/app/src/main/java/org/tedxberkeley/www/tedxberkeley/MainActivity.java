@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.view.View;
 
 import org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment;
+import org.tedxberkeley.www.tedxberkeley.Views.SlidingTabLayout;
 import org.tedxberkeley.www.tedxberkeley.Views.TabsPagerAdapter;
 
 
@@ -26,10 +27,9 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
 
     // Navigation
     private ActionBar actionBar;
-    private ViewPager viewPager;
+    private ViewPager mViewPager;
     private TabsPagerAdapter mAdapter;
     private View mContainer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,12 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        mAdapter = new TabsPagerAdapter(getSupportFragmentManager(), this); // Might not work with this
+        toolbar.setNavigationIcon(R.drawable.ic_launcher);
+        toolbar.setNavigationContentDescription(R.string.navigation_icon_description);
 
         initializeFragments();
-        initializeTabs(0);
+
+
     }
 
     @Override
@@ -55,61 +56,6 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         return super.onOptionsItemSelected(item);
-    }
-
-    public void initializeTabs(int option){
-        actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
-            public void onTabSelected(Tab tab, FragmentTransaction ft) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-            public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-                // hide the given tab
-            }
-            public void onTabReselected(Tab tab, FragmentTransaction ft) {
-                // probably ignore this event
-            }
-        };
-
-        viewPager.setAdapter(mAdapter);
-        actionBar.setHomeButtonEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-        if (option == 0) {
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText("Schedule")
-                            .setTabListener(tabListener));
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText("Speakers")
-                            .setTabListener(tabListener));
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText("About")
-                            .setTabListener(tabListener));
-        }
-
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int position) {
-                // on changing the page
-                // make respected tab selected
-                actionBar.setSelectedNavigationItem(position);
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-            }
-
-
-        });
     }
 
 
