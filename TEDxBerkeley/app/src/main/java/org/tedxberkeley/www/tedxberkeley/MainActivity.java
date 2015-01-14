@@ -41,11 +41,7 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
         setContentView(R.layout.activity_main);
 
         initializeFragments();
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_launcher);
-        toolbar.setNavigationContentDescription(R.string.navigation_icon_description);
+        setUpToolbar();
     }
 
     @Override
@@ -76,6 +72,14 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
         ft.replace(R.id.container, fragment);
         ft.addToBackStack(null);
         ft.commit();
+    }
+
+    public void setUpToolbar(){
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        toolbar.setNavigationContentDescription(R.string.navigation_icon_description);
+        actionBar.setTitle("");
     }
 
     public void onFragmentInteraction(Uri uri){}
