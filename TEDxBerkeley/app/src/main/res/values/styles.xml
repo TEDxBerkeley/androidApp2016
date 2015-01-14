@@ -15,15 +15,13 @@
         <item name="android:actionMenuTextColor">@color/white</item>
     </style>
 
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
-        <item name="android:titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
+    <style name="MyActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="theme">@style/ThemeOverlay.MyApp.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
-    <style name="MyActionBar.TitleTextStyle"
-        parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/ted_red</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">24dip</item>
+    <style name="ThemeOverlay.MyApp.ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/ted_red</item>
     </style>
 
 </resources>

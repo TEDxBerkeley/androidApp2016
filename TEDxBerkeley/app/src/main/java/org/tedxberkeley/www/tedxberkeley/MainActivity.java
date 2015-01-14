@@ -79,7 +79,7 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         toolbar.setNavigationContentDescription(R.string.navigation_icon_description);
-        actionBar.setTitle("");
+        actionBar.setTitle("Speakers");
     }
 
     public void onFragmentInteraction(Uri uri){}
