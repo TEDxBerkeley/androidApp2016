@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.ListView;
 import org.tedxberkeley.www.tedxberkeley.MainActivity;
 import org.tedxberkeley.www.tedxberkeley.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class SpeakerListFragment extends Fragment {
@@ -21,6 +23,7 @@ public class SpeakerListFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     private SpeakerListAdapter mAdapter;
     private MainActivity mMainActivity;
+    private ArrayList<Speaker> mSpeakerList;
     private ListView mSpeakerListView;
 
 
@@ -32,6 +35,18 @@ public class SpeakerListFragment extends Fragment {
     public SpeakerListFragment() {
     }
 
+    public ArrayList<Speaker> configureSpeakerList(){
+        mMainActivity = (MainActivity)getActivity();
+        mSpeakerList = new ArrayList<Speaker>();
+        Speaker speaker1 = new Speaker("John Smith", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
+        Speaker speaker2 = new Speaker("Sal Kahn", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
+        Speaker speaker3 = new Speaker("Max Wolffe", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
+        mSpeakerList.add(speaker1);
+        mSpeakerList.add(speaker2);
+        mSpeakerList.add(speaker3);
+        return mSpeakerList;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +56,11 @@ public class SpeakerListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        ArrayList<Speaker> speaker;
         View view =  inflater.inflate(R.layout.fragment_speaker_list, container, false);
-
-        mSpeakerListView = (ListView) view.findViewById(android.R.id.list);
-
-        mAdapter = new SpeakerListAdapter(mMainActivity, R.layout.speaker_row, getSpeakers());
+        mSpeakerListView = (ListView) view.findViewById(R.id.speaker_list_view);
+        speaker = configureSpeakerList();
+        mAdapter = new SpeakerListAdapter(mMainActivity, R.layout.speaker_row, speaker);
         mSpeakerListView.setAdapter(mAdapter);
         return view;
     }
