@@ -2,40 +2,43 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="org.tedxberkeley.www.tedxberkeley.About.AboutFragment">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_marginLeft="@dimen/content_margin"
-        android:layout_marginStart="@dimen/content_margin"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_large"
-            android:layout_marginTop="@dimen/standard_space"
-            android:text="About TEDxBerkeley" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_small"
-            android:layout_marginTop="@dimen/standard_space"
-            android:text="@string/about_tedxberkeley" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_large"
-            android:layout_marginTop="@dimen/standard_space"
-            android:text="About TED" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/standard_space"
-            android:textSize="@dimen/text_small"
-            android:layout_marginTop="@dimen/standard_space"
-            android:text="@string/about_ted" />
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/content_margin"
+            android:layout_marginStart="@dimen/content_margin"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:layout_marginTop="@dimen/standard_space"
+                android:text="About TEDxBerkeley" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/standard_space"
+                android:text="@string/about_tedxberkeley" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:layout_marginTop="@dimen/standard_space"
+                android:text="About TED" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/standard_space"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/standard_space"
+                android:text="@string/about_ted" />
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

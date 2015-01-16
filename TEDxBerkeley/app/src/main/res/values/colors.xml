@@ -9,4 +9,9 @@
     <color name="dark_red">#d50000</color>
     <color name="light_red">#ff5252</color>
 
+    <color name="event_color_01">#59dbe0</color>
+    <color name="event_color_02">#f57f68</color>
+    <color name="event_color_03">#87d288</color>
+    <color name="event_color_04">#f8b552</color>
+
 </resources>

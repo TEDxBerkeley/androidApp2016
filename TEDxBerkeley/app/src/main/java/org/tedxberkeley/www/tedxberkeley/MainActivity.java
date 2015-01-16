@@ -30,7 +30,7 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
     private ScheduleFragment mScheduleFragment;
 
     // Navigation
-    private ActionBar actionBar;
+    private ActionBar mActionBar;
     private ViewPager mViewPager;
     private TabsPagerAdapter mAdapter;
     private View mContainer;
@@ -56,12 +56,15 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
         switch(id){
             case R.id.schedule:
                 replaceFragment(mScheduleFragment);
+                mActionBar.setTitle("Schedule");
                 break;
             case R.id.speakers:
                 replaceFragment(mSpeakerListFragment);
+                mActionBar.setTitle("Speakers");
                 break;
             case R.id.about:
                 replaceFragment(mAboutFragment);
+                mActionBar.setTitle("About");
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -77,9 +80,9 @@ public class MainActivity extends ActionBarActivity implements SpeakerListFragme
     public void setUpToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
+        mActionBar = getSupportActionBar();
         toolbar.setNavigationContentDescription(R.string.navigation_icon_description);
-        actionBar.setTitle("Speakers");
+        mActionBar.setTitle("Speakers");
     }
 
     public void onFragmentInteraction(Uri uri){}
