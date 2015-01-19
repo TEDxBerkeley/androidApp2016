@@ -35,9 +35,6 @@
             android:layout_marginStart="@dimen/content_margin"/>
 
         </LinearLayout>
-
-
-
     </ScrollView>
 
 </FrameLayout>

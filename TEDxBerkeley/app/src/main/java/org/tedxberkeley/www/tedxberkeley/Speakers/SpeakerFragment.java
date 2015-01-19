@@ -7,15 +7,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import org.tedxberkeley.www.tedxberkeley.MainActivity;
 import org.tedxberkeley.www.tedxberkeley.R;
-
-import java.util.ArrayList;
 
 public class SpeakerFragment extends Fragment {
 
     private Activity mListener;
     private Speaker mSpeaker;
+    private MainActivity mainActivity;
     public static SpeakerFragment newInstance(Speaker speaker) {
         SpeakerFragment fragment = new SpeakerFragment();
         fragment.configureWithSpeaker(speaker);
@@ -38,7 +39,10 @@ public class SpeakerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_speaker, container, false);
+        View view = inflater.inflate(R.layout.fragment_speaker, container, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.speaker_photo);
+        imageView.setImageBitmap(MainActivity.decodeSampledBitmapFromResource(getResources(), R.drawable.rsarpong, 300, 300));
+        return view;
     }
 
     @Override
