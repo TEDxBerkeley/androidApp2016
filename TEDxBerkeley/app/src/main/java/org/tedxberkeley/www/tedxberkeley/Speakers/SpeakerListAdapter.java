@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.tedxberkeley.www.tedxberkeley.R;
@@ -41,6 +42,7 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
             holder.name = (TextView)row.findViewById(R.id.name);
             holder.subTitle = (TextView)row.findViewById(R.id.subtitle);
             holder.description = (TextView) row.findViewById(R.id.description);
+            holder.photo = (ImageView) row.findViewById(R.id.talk_icon);
 
             row.setTag(holder);
         }
@@ -52,6 +54,7 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
         holder.name.setText(speaker.getName());
         holder.subTitle.setText(speaker.getSubTitle());
         holder.description.setText(speaker.getDescription());
+        holder.photo.setImageResource(speaker.getIcon());
 
         return row;
     }
@@ -60,6 +63,6 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
         TextView name;
         TextView subTitle;
         TextView description;
-        Bitmap photo;
+        ImageView photo;
     }
 }
