@@ -41,7 +41,6 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
             holder = new SpeakerHolder();
             holder.name = (TextView)row.findViewById(R.id.name);
             holder.subTitle = (TextView)row.findViewById(R.id.subtitle);
-            holder.description = (TextView) row.findViewById(R.id.description);
             holder.photo = (ImageView) row.findViewById(R.id.talk_icon);
 
             row.setTag(holder);
@@ -53,7 +52,6 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
         Speaker speaker = mData.get(position);
         holder.name.setText(speaker.getName());
         holder.subTitle.setText(speaker.getSubTitle());
-        holder.description.setText(speaker.getDescription());
         holder.photo.setImageResource(speaker.getIcon());
 
         return row;
@@ -62,7 +60,6 @@ public class SpeakerListAdapter extends ArrayAdapter<Speaker> {
     static class SpeakerHolder{
         TextView name;
         TextView subTitle;
-        TextView description;
         ImageView photo;
     }
 }

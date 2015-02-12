@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 
 import org.tedxberkeley.www.tedxberkeley.R;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -17,7 +18,7 @@ public class Speaker {
     private String mDescription;
     private Bitmap mPhoto;
     private Integer mIcon;
-    private Set<String> mPerformerNames;
+    private HashSet<String> mPerformerNames = new HashSet<String>();
 
     public Speaker(String name, String subTitle, String description){
         this.mName = name;
