@@ -109,7 +109,6 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime.set(Calendar.YEAR, newYear);
         Calendar endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 1);
-        endTime.set(Calendar.MONTH, 2);
         WeekViewEvent event = new WeekViewEvent(1, "Registration", startTime, endTime);
         event.setColor(getResources().getColor(R.color.event_color_01));
         events.add(event);
@@ -123,7 +122,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime = (Calendar) startTime.clone();
         endTime.set(Calendar.HOUR_OF_DAY, 9);
         endTime.set(Calendar.MINUTE, 0);
-        event = new WeekViewEvent(10, "Speaker 1", startTime, endTime);
+        event = new WeekViewEvent(1, "Speaker 1", startTime, endTime);
         event.setColor(getResources().getColor(R.color.event_color_03));
         events.add(event);
 
@@ -136,7 +135,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime = (Calendar) startTime.clone();
         endTime.set(Calendar.HOUR_OF_DAY, 5);
         endTime.set(Calendar.MINUTE, 0);
-        event = new WeekViewEvent(10, "Speaker 2", startTime, endTime);
+        event = new WeekViewEvent(1, "Speaker 2", startTime, endTime);
         event.setColor(getResources().getColor(R.color.event_color_03));
         events.add(event);
 
@@ -144,7 +143,6 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
 
