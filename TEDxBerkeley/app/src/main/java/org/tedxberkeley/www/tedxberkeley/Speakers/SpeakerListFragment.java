@@ -41,7 +41,7 @@ public class SpeakerListFragment extends ListFragment {
         mSpeakerList = new ArrayList<Speaker>();
         Speaker speaker1 = new Speaker("John Smith", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
         Speaker speaker2 = new Speaker("Sal Kahn", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
-        Speaker speaker3 = new Speaker("Max Wolffe", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
+        Speaker speaker3 = new Speaker("UC Men's Octet", "Master Fighter", "John is a master fighter. He is truely a force to be reckoned with");
         mSpeakerList.add(speaker1);
         mSpeakerList.add(speaker2);
         mSpeakerList.add(speaker3);

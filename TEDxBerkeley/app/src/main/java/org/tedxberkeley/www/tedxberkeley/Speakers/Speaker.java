@@ -28,6 +28,10 @@ public class Speaker {
     }
 
     private Integer performOrSpeaker(String name){
+        mPerformerNames.add("UC Men's Octet");
+        mPerformerNames.add("Cal Bhangra");
+        mPerformerNames.add("Viviana Guzmán");
+        mPerformerNames.add("Cal Taiko");
         if (mPerformerNames.contains(name)){
             return R.drawable.icon_guitar;
         }
