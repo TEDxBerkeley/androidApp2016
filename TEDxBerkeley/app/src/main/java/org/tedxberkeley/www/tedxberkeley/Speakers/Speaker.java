@@ -16,26 +16,27 @@ public class Speaker {
     private String mName;
     private String mSubTitle;
     private String mDescription;
-    private Bitmap mPhoto;
+    private int mPhotoId;
     private Integer mIcon;
     private HashSet<String> mPerformerNames = new HashSet<String>();
 
-    public Speaker(String name, String subTitle, String description){
+    public Speaker(String name, String subTitle, String description, int photoId){
         this.mName = name;
         this.mDescription = description;
         this.mSubTitle = subTitle;
         this.mIcon = performOrSpeaker(name);
+        this.mPhotoId = photoId;
     }
 
     private Integer performOrSpeaker(String name){
         mPerformerNames.add("UC Men's Octet");
         mPerformerNames.add("Cal Bhangra");
         mPerformerNames.add("Viviana Guzmán");
-        mPerformerNames.add("Cal Taiko");
+        mPerformerNames.add("Cal Raiji Taiko");
         if (mPerformerNames.contains(name)){
-            return R.drawable.icon_guitar;
+            return R.drawable.music;
         }
-        return R.drawable.icon_speaker;
+        return R.drawable.speaker;
     }
 
     public String getName(){
@@ -49,6 +50,8 @@ public class Speaker {
     public String getDescription(){
         return mDescription;
     }
+
+    public int getPhoto() { return mPhotoId; }
 
     public Integer getIcon() {return mIcon;}
 

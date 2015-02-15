@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerFragment">
 
     <ScrollView
@@ -13,7 +14,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            >
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/speaker_photo"
@@ -51,6 +52,7 @@
                         android:layout_marginLeft="@dimen/content_margin"
                         android:layout_marginStart="@dimen/content_margin"
                         android:layout_marginRight="@dimen/standard_space"
+                        android:layout_marginBottom="@dimen/standard_margin"
                         android:text="@string/lorem_ispum"/>
                 </LinearLayout>
             </ScrollView>

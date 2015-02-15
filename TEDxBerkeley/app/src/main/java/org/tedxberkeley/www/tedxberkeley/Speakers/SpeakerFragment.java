@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import org.tedxberkeley.www.tedxberkeley.MainActivity;
 import org.tedxberkeley.www.tedxberkeley.R;
@@ -40,8 +41,12 @@ public class SpeakerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
+        TextView description = (TextView) view.findViewById(R.id.speaker_description);
+        description.setText(mSpeaker.getDescription());
+        TextView name = (TextView) view.findViewById(R.id.speaker_name);
+        name.setText(mSpeaker.getName());
         ImageView imageView = (ImageView) view.findViewById(R.id.speaker_photo);
-        imageView.setImageBitmap(MainActivity.decodeSampledBitmapFromResource(getResources(), R.drawable.rsarpong, 300, 300));
+        imageView.setImageBitmap(MainActivity.decodeSampledBitmapFromResource(getResources(), mSpeaker.getPhoto(), 300, 300));
         return view;
     }
 

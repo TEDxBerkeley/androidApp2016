@@ -7,6 +7,7 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +24,6 @@ import java.util.List;
 public class ScheduleFragment extends Fragment implements WeekView.MonthChangeListener,
                                                           WeekView.EventClickListener,
                                                           WeekView.EventLongPressListener {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
     private WeekView mWeekView;
 
@@ -67,6 +63,14 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
 
         // Set long press listener for events.
         mWeekView.setEventLongPressListener(this);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.MONTH, 1);
+        calendar.set(Calendar.DAY_OF_MONTH, 28);
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.YEAR, 2016);
+        //Log.e("waht", calendar.toString());
+        //mWeekView.goToDate(calendar);
 
         return view;
     }
@@ -124,14 +128,14 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 2);
         endTime.set(Calendar.MONTH, newMonth-1);
-        event = new WeekViewEvent(1, "Wisdom    " +  "      Men's Octet \n" +
-                "                         Prasad Kaipa\n" +
-                "                         Adora Svitak\n" +
-                "                         Marc Gopin\n" +
-                "                         Carolyn Gable\n" +
-                "                         Eric Holt-Gimenez\n" +
-                "                         Dan Garcia\n" +
-                "                         Valerie Joi", startTime, endTime);
+        event = new WeekViewEvent(1, "Wisdom    " +  "       Men's Octet \n" +
+                "                          Prasad Kaipa\n" +
+                "                          Adora Svitak\n" +
+                "                          Marc Gopin\n" +
+                "                          Carolyn Gable\n" +
+                "                          Eric Holt-Gimenez\n" +
+                "                          Dan Garcia\n" +
+                "                          Valerie Joi", startTime, endTime);
         event.setColor(getResources().getColor(R.color.ted_red));
         events.add(event);
 
@@ -144,7 +148,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 1);
         endTime.add(Calendar.MINUTE, 30);
-        endTime.set(Calendar.MONTH, newMonth-1);
+        endTime.set(Calendar.MONTH, newMonth - 1);
         event = new WeekViewEvent(1, "Lunch", startTime, endTime);
         event.setColor(getResources().getColor(R.color.black));
         events.add(event);
@@ -194,8 +198,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
                 "                          Richmond Sarpong\n" +
                 "                          Emily Levine\n" +
                 "                          Eric Rasmussen\n" +
-                "                          Viviana Guzman\n" +
-                "                          Steve Wozniack\n", startTime, endTime);
+                "                          Viviana Guzman\n" , startTime, endTime);
         event.setColor(getResources().getColor(R.color.ted_red));
         events.add(event);
 
