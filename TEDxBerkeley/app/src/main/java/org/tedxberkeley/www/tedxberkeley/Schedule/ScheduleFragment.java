@@ -102,39 +102,41 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         List<WeekViewEvent> events = new ArrayList<WeekViewEvent>();
 
         Calendar startTime = Calendar.getInstance();
-        startTime.set(Calendar.HOUR_OF_DAY, 3);
+        startTime.set(Calendar.HOUR_OF_DAY, 8);
         startTime.set(Calendar.MINUTE, 0);
-        startTime.set(Calendar.MONTH, newMonth - 1);
+        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.MONTH, 1);
         startTime.set(Calendar.YEAR, newYear);
         Calendar endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 1);
-        endTime.set(Calendar.MONTH, newMonth - 1);
-        WeekViewEvent event = new WeekViewEvent(1, getEventTitle(startTime), startTime, endTime);
+        endTime.set(Calendar.MONTH, 2);
+        WeekViewEvent event = new WeekViewEvent(1, "Registration", startTime, endTime);
         event.setColor(getResources().getColor(R.color.event_color_01));
         events.add(event);
 
         startTime = Calendar.getInstance();
-        startTime.set(Calendar.HOUR_OF_DAY, 3);
-        startTime.set(Calendar.MINUTE, 30);
-        startTime.set(Calendar.MONTH, newMonth - 1);
+        startTime.set(Calendar.HOUR_OF_DAY, 8);
+        startTime.set(Calendar.MINUTE, 0);
+        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.MONTH, 1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
-        endTime.set(Calendar.HOUR_OF_DAY, 4);
-        endTime.set(Calendar.MINUTE, 30);
-        endTime.set(Calendar.MONTH, newMonth - 1);
-        event = new WeekViewEvent(10, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.event_color_02));
+        endTime.set(Calendar.HOUR_OF_DAY, 9);
+        endTime.set(Calendar.MINUTE, 0);
+        event = new WeekViewEvent(10, "Speaker 1", startTime, endTime);
+        event.setColor(getResources().getColor(R.color.event_color_03));
         events.add(event);
 
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 4);
         startTime.set(Calendar.MINUTE, 20);
+        startTime.set(Calendar.DAY_OF_MONTH, 28);
         startTime.set(Calendar.MONTH, newMonth - 1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
         endTime.set(Calendar.HOUR_OF_DAY, 5);
         endTime.set(Calendar.MINUTE, 0);
-        event = new WeekViewEvent(10, getEventTitle(startTime), startTime, endTime);
+        event = new WeekViewEvent(10, "Speaker 2", startTime, endTime);
         event.setColor(getResources().getColor(R.color.event_color_03));
         events.add(event);
 
