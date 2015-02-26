@@ -45,6 +45,16 @@
                         android:text="Swag Speaker Name"/>
 
                     <TextView
+                        android:id="@+id/speaker_tagline"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/content_margin"
+                        android:layout_marginStart="@dimen/content_margin"
+                        android:textSize="@dimen/text_standard"
+                        android:textColor="@color/ted_red"
+                        android:text="Swag Speaker Title"/>
+
+                    <TextView
                         android:id="@+id/speaker_description"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"

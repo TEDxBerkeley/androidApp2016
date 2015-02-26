@@ -26,7 +26,6 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
                                                           WeekView.EventLongPressListener {
 
     private WeekView mWeekView;
-
     private OnFragmentInteractionListener mListener;
 
 
@@ -64,18 +63,11 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         // Set long press listener for events.
         mWeekView.setEventLongPressListener(this);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.MONTH, 1);
-        calendar.set(Calendar.DAY_OF_MONTH, 28);
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
-        calendar.set(Calendar.YEAR, 2016);
-        //Log.e("waht", calendar.toString());
-        //mWeekView.goToDate(calendar);
+        mWeekView.goToHour(8);
 
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -107,15 +99,43 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
 
         Calendar startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 8);
+        startTime.set(Calendar.MINUTE, 0);
+        startTime.set(Calendar.DAY_OF_MONTH, 26);
+        startTime.set(Calendar.MONTH, newMonth-1);
+        startTime.set(Calendar.YEAR, newYear);
+        Calendar endTime = (Calendar) startTime.clone();
+        endTime.add(Calendar.HOUR, 8);
+        endTime.add(Calendar.MINUTE, 0);
+        endTime.set(Calendar.MONTH, newMonth - 1);
+        WeekViewEvent event = new WeekViewEvent(1, "TEDxBerkeley 2 Days Away!", startTime, endTime);
+        event.setColor(getResources().getColor(R.color.black));
+        events.add(event);
+
+        startTime = Calendar.getInstance();
+        startTime.set(Calendar.HOUR_OF_DAY, 8);
+        startTime.set(Calendar.MINUTE, 0);
+        startTime.set(Calendar.DAY_OF_MONTH, 27);
+        startTime.set(Calendar.MONTH, newMonth-1);
+        startTime.set(Calendar.YEAR, newYear);
+        endTime = (Calendar) startTime.clone();
+        endTime.add(Calendar.HOUR, 8);
+        endTime.add(Calendar.MINUTE, 0);
+        endTime.set(Calendar.MONTH, newMonth - 1);
+        event = new WeekViewEvent(1, "TEDxBerkeley 1 Day Away!", startTime, endTime);
+        event.setColor(getResources().getColor(R.color.ted_red));
+        events.add(event);
+
+        startTime = Calendar.getInstance();
+        startTime.set(Calendar.HOUR_OF_DAY, 8);
         startTime.set(Calendar.MINUTE, 30);
         startTime.set(Calendar.DAY_OF_MONTH, 28);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
-        Calendar endTime = (Calendar) startTime.clone();
+        endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 1);
         endTime.add(Calendar.MINUTE, 30);
         endTime.set(Calendar.MONTH, newMonth-1);
-        WeekViewEvent event = new WeekViewEvent(1, "Registration", startTime, endTime);
+        event = new WeekViewEvent(1, "Registration", startTime, endTime);
         event.setColor(getResources().getColor(R.color.black));
         events.add(event);
 
@@ -128,7 +148,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 2);
         endTime.set(Calendar.MONTH, newMonth-1);
-        event = new WeekViewEvent(1, "Wisdom    " +  "       Men's Octet \n" +
+        event = new WeekViewEvent(1, "Wisdom    " +  "       UC Men's Octet \n" +
                 "                          Prasad Kaipa\n" +
                 "                          Adora Svitak\n" +
                 "                          Marc Gopin\n" +
@@ -163,7 +183,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime.add(Calendar.HOUR, 1);
         endTime.add(Calendar.MINUTE, 45);
         endTime.set(Calendar.MONTH, newMonth-1);
-        event = new WeekViewEvent(1, "Compassion   Cal Taiko\n" +
+        event = new WeekViewEvent(1, "Compassion   Cal Raijin Taiko\n" +
                 "                          Suzanne Ackerman-Berman\n" +
                 "                          Victoria Kisyombe\n" +
                 "                          Alison Meyer\n" +
@@ -198,7 +218,8 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
                 "                          Richmond Sarpong\n" +
                 "                          Emily Levine\n" +
                 "                          Eric Rasmussen\n" +
-                "                          Viviana Guzman\n" , startTime, endTime);
+                "                          Viviana Guzman\n" +
+                "                          Steve Wozniak\n", startTime, endTime);
         event.setColor(getResources().getColor(R.color.ted_red));
         events.add(event);
 

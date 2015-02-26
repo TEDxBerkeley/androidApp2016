@@ -47,6 +47,8 @@ public class SpeakerFragment extends Fragment {
         name.setText(mSpeaker.getName());
         ImageView imageView = (ImageView) view.findViewById(R.id.speaker_photo);
         imageView.setImageBitmap(MainActivity.decodeSampledBitmapFromResource(getResources(), mSpeaker.getPhoto(), 300, 300));
+        TextView tagline = (TextView) view.findViewById(R.id.speaker_tagline);
+        tagline.setText(mSpeaker.getSubTitle());
         return view;
     }
 

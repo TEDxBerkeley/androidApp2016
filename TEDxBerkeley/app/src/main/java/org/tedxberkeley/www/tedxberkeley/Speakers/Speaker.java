@@ -32,7 +32,7 @@ public class Speaker {
         mPerformerNames.add("UC Men's Octet");
         mPerformerNames.add("Cal Bhangra");
         mPerformerNames.add("Viviana Guzmán");
-        mPerformerNames.add("Cal Raiji Taiko");
+        mPerformerNames.add("Cal Raijin Taiko");
         if (mPerformerNames.contains(name)){
             return R.drawable.music;
         }
