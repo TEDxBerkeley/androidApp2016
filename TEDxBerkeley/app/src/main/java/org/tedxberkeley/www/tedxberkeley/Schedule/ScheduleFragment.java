@@ -100,7 +100,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         Calendar startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 8);
         startTime.set(Calendar.MINUTE, 0);
-        startTime.set(Calendar.DAY_OF_MONTH, 26);
+        startTime.set(Calendar.DAY_OF_MONTH, 4);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         Calendar endTime = (Calendar) startTime.clone();
@@ -114,7 +114,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 8);
         startTime.set(Calendar.MINUTE, 0);
-        startTime.set(Calendar.DAY_OF_MONTH, 27);
+        startTime.set(Calendar.DAY_OF_MONTH, 5);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
@@ -128,7 +128,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 8);
         startTime.set(Calendar.MINUTE, 30);
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
@@ -142,7 +142,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 10);
         startTime.set(Calendar.MINUTE, 00);
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
@@ -162,7 +162,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 12);
         startTime.set(Calendar.MINUTE, 0);
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
@@ -176,7 +176,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 13);
         startTime.set(Calendar.MINUTE, 30);
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
@@ -194,7 +194,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         events.add(event);
 
         startTime = Calendar.getInstance();
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.HOUR_OF_DAY,15);
         startTime.set(Calendar.MINUTE, 15);
         startTime.set(Calendar.MONTH, newMonth-1);
@@ -206,7 +206,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         events.add(event);
 
         startTime = Calendar.getInstance();
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.HOUR_OF_DAY,15);
         startTime.set(Calendar.MINUTE, 45);
         startTime.set(Calendar.MONTH, newMonth-1);
@@ -226,7 +226,7 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
 
 
         startTime = Calendar.getInstance();
-        startTime.set(Calendar.DAY_OF_MONTH, 28);
+        startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.HOUR_OF_DAY, 17);
         startTime.set(Calendar.MINUTE, 15);
         startTime.set(Calendar.MONTH, newMonth-1);

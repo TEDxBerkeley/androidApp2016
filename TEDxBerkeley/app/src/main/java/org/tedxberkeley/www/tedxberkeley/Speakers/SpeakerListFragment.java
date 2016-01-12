@@ -37,29 +37,28 @@ public class SpeakerListFragment extends ListFragment {
         mMainActivity = (MainActivity)getActivity();
         mSpeakerList = new ArrayList<Speaker>();
 
-        mSpeakerList.add(new Speaker("UC Men's Octet", "Cal A Capella Group", getString(R.string.octet_bio), R.drawable.octet));
-        mSpeakerList.add(new Speaker("Prasad Kaipa", "CEO, Kaipa Group", getString(R.string.kaipa_bio), R.drawable.kaipa));
-        mSpeakerList.add(new Speaker("Adora Svitak", "Activist for Feminism and Youth", getString(R.string.svitak_bio), R.drawable.headshot));
-        mSpeakerList.add(new Speaker("Marc Gopin", "Director of the CRDC", getString(R.string.gopin_bio), R.drawable.gopin));
-        mSpeakerList.add(new Speaker("Carolyn Gable", "Co Founder of Expect a Miracle", getString(R.string.gable_bio), R.drawable.gabel));
-        mSpeakerList.add(new Speaker("Eric Holt-Giménez", "Executive Director of Food First", getString(R.string.giminez_bio), R.drawable.gimenez));
-        mSpeakerList.add(new Speaker("Dan Garcia", "Innovator in Computer Science Education", getString(R.string.garcia_bio), R.drawable.garcia));
-        mSpeakerList.add(new Speaker("Valerie Joi", "Musical Minister", getString(R.string.joi_bio), R.drawable.joi));
+        mSpeakerList.add(new Speaker("Christopher Ategeka", "Engineer and Social Entrepreneur", getString(R.string.ategeka_bio), R.drawable.ategeka));
+        mSpeakerList.add(new Speaker("Kathy Calvin", "CEO of United Nations Foundation", getString(R.string.calvin_bio), R.drawable.calvin));
+        mSpeakerList.add(new Speaker("Jacob Corn", "Scientific Director if Innovative Genomics Initiative", getString(R.string.corn_bio), R.drawable.corn));
+        mSpeakerList.add(new Speaker("Stephanie Freid", "International Conflicts Journalist", getString(R.string.freid_bio), R.drawable.freid));
+        mSpeakerList.add(new Speaker("Rob Hotchkiss", "Musician", getString(R.string.hotchkiss_bio), R.drawable.hotchkiss));
+        mSpeakerList.add(new Speaker("Naveen Jain", "Entrepreneur and Philanthropist", getString(R.string.jain_bio), R.drawable.jain));
+        mSpeakerList.add(new Speaker("Jeromy Johnson", "Expert in EMF Exposure", getString(R.string.johnson_bio), R.drawable.johnson));
+        mSpeakerList.add(new Speaker("Reverend Deborah Johnson", "Minister, Author, and Diversity Expert", getString(R.string.deborah_bio), R.drawable.deborah));
 
-        mSpeakerList.add(new Speaker("Cal Raijin Taiko", "Performance Drum Group", getString(R.string.taiko_bio), R.drawable.taiko));
-        mSpeakerList.add(new Speaker("Suzanne Ackerman-Berman", "Transformation Director, Pick n Pay", getString(R.string.ackerman_bio), R.drawable.sab));
-        mSpeakerList.add(new Speaker("Dr. Victoria Kisyombe", "Innovator in Women Empowerment", getString(R.string.kisyombe_bio), R.drawable.kisyombe));
-        mSpeakerList.add(new Speaker("Alison Meyer", "Haas Leadership Coach", getString(R.string.meyer_bio), R.drawable.meyer));
-        mSpeakerList.add(new Speaker("Mike Robbins", "Author", getString(R.string.robins_bio), R.drawable.robbins));
-        mSpeakerList.add(new Speaker("Meera Shenoy", "Founder of Youth4Jobs", getString(R.string.sheenoy_bio), R.drawable.meera));
-        mSpeakerList.add(new Speaker("Dan Viederman", "CEO of Verité", getString(R.string.viederman_bio), R.drawable.viederman));
+        mSpeakerList.add(new Speaker("Aran Khanna", "Computer Scientist and Security Researcher", getString(R.string.khanna_bio), R.drawable.khanna));
+        mSpeakerList.add(new Speaker("John Koenig", "Creator of the Dictionary of Obscure Sorrows", getString(R.string.koenig_bio), R.drawable.koenig));
+        mSpeakerList.add(new Speaker("Ellen Leanse", "Digital Pioneer", getString(R.string.leanse_bio), R.drawable.leanse));
+        mSpeakerList.add(new Speaker("Dr. Susan Lim", "Surgeon and Entrepreneur", getString(R.string.lim_bio), R.drawable.lim));
+        mSpeakerList.add(new Speaker("OSA Chamber Choir", "Choir Group", getString(R.string.choir_bio), R.drawable.choir));
+        mSpeakerList.add(new Speaker("Sonia Rao", "Singer and Songwriter", getString(R.string.rao_bio), R.drawable.rao));
+        mSpeakerList.add(new Speaker("Isha Ray", "Co-Director of Berkeley Water Center", getString(R.string.ray_bio), R.drawable.ray));
 
-        mSpeakerList.add(new Speaker("Cal Bhangra", "Punjabi Dance Group", getString(R.string.bhangra_bio), R.drawable.bhangra));
-        mSpeakerList.add(new Speaker("Richmond Sarpong", "Professor of Chemistry", getString(R.string.sarpong_bio), R.drawable.rsarpong));
-        mSpeakerList.add(new Speaker("Emily Levine", "Producer and Comedian", getString(R.string.levin_bio), R.drawable.good_emily_levine));
-        mSpeakerList.add(new Speaker("Eric Rasmussen, MD", "CEO for Infinitum Humanitarian Systems", getString(R.string.rass_bio), R.drawable.rasmussen));
-        mSpeakerList.add(new Speaker("Viviana Guzmán", "Flutist", getString(R.string.guzman_bio), R.drawable.viviana));
-        mSpeakerList.add(new Speaker("Steve Wozniak", "Apple Computer Co-Founder", getString(R.string.woz_bio), R.drawable.woz));
+        mSpeakerList.add(new Speaker("Amandine Roche", "Human Rights Expert", getString(R.string.roche_bio), R.drawable.roche));
+        mSpeakerList.add(new Speaker("Dr. Sriram Shamasunder", "Co-Founder of HEAL Initiative", getString(R.string.shamasunder_bio), R.drawable.shamasunder));
+        mSpeakerList.add(new Speaker("Dr. Andrew Siemion", "Astrophysicist", getString(R.string.siemion_bio), R.drawable.siemion));
+        mSpeakerList.add(new Speaker("Joshua Toch", "UC Berkeley Student, Founder of Mind before Mouth", getString(R.string.toch_bio), R.drawable.toch));
+        mSpeakerList.add(new Speaker("UC Berkeley Azaad", "UC Berkeley Bollywood Dance Team", getString(R.string.azaad_bio), R.drawable.azaad));
         return mSpeakerList;
     }
 
