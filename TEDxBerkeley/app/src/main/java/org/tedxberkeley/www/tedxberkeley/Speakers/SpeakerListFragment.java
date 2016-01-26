@@ -45,6 +45,7 @@ public class SpeakerListFragment extends ListFragment {
         mSpeakerList.add(new Speaker("Naveen Jain", "Entrepreneur and Philanthropist", getString(R.string.jain_bio), R.drawable.jain));
         mSpeakerList.add(new Speaker("Jeromy Johnson", "Expert in EMF Exposure", getString(R.string.johnson_bio), R.drawable.johnson));
         mSpeakerList.add(new Speaker("Reverend Deborah Johnson", "Minister, Author, and Diversity Expert", getString(R.string.deborah_bio), R.drawable.deborah));
+        mSpeakerList.add(new Speaker("Celli@Berkeley", "UC Berkeley Celli Performance Group", getString(R.string.celli_bio), R.drawable.celli));
 
         mSpeakerList.add(new Speaker("Aran Khanna", "Computer Scientist and Security Researcher", getString(R.string.khanna_bio), R.drawable.khanna));
         mSpeakerList.add(new Speaker("John Koenig", "Creator of the Dictionary of Obscure Sorrows", getString(R.string.koenig_bio), R.drawable.koenig));
