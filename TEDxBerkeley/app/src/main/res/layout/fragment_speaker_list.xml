@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment">
+    tools:context="org.tedxberkeley.www.tedxberkeley2016.Speakers.SpeakerListFragment">
 
     <ListView
         android:id="@android:id/list"

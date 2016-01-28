@@ -1,7 +1,6 @@
-package org.tedxberkeley.www.tedxberkeley.Speakers;
+package org.tedxberkeley.www.tedxberkeley2016.Speakers;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.tedxberkeley.www.tedxberkeley.MainActivity;
-import org.tedxberkeley.www.tedxberkeley.R;
+import org.tedxberkeley.www.tedxberkeley2016.MainActivity;
+import org.tedxberkeley.www.tedxberkeley2016.R;
 
 public class SpeakerFragment extends Fragment {
 

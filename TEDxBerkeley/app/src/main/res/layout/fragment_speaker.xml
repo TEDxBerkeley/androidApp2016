@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerFragment">
+    tools:context="org.tedxberkeley.www.tedxberkeley2016.Speakers.SpeakerFragment">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -42,7 +42,7 @@
                         android:layout_marginStart="@dimen/content_margin"
                         android:textSize="@dimen/text_large"
                         android:textColor="@color/ted_red"
-                        android:text="Swag Speaker Name"/>
+                        android:text="Speaker Name"/>
 
                     <TextView
                         android:id="@+id/speaker_tagline"
@@ -52,7 +52,7 @@
                         android:layout_marginStart="@dimen/content_margin"
                         android:textSize="@dimen/text_standard"
                         android:textColor="@color/ted_red"
-                        android:text="Swag Speaker Title"/>
+                        android:text="Speaker Title"/>
 
                     <TextView
                         android:id="@+id/speaker_description"

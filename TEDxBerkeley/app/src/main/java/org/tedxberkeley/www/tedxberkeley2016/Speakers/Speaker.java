@@ -1,10 +1,9 @@
-package org.tedxberkeley.www.tedxberkeley.Speakers;
+package org.tedxberkeley.www.tedxberkeley2016.Speakers;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 
-import org.tedxberkeley.www.tedxberkeley.R;
+import org.tedxberkeley.www.tedxberkeley2016.R;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,7 +17,16 @@ public class Speaker {
     private String mDescription;
     private int mPhotoId;
     private Integer mIcon;
-    private HashSet<String> mPerformerNames = new HashSet<String>();
+    public static final String[] PERFORMER_NAMES = new String[] { "UC Berkeley Azaad",
+            "Rob Hotchkiss",
+            "Celli@Berkeley",
+            "OSA Chamber Choir",
+            "Rose Gelfand",
+            "Molly Gardner",
+            "Isa Ansari",
+            "Sonia Rao"};
+    private static final Set<String> PERFORMER_SET = new HashSet<>(Arrays.asList(PERFORMER_NAMES));
+
 
     public Speaker(String name, String subTitle, String description, int photoId){
         this.mName = name;
@@ -29,11 +37,7 @@ public class Speaker {
     }
 
     private Integer performOrSpeaker(String name){
-        mPerformerNames.add("UC Men's Octet");
-        mPerformerNames.add("Cal Bhangra");
-        mPerformerNames.add("Viviana Guzmán");
-        mPerformerNames.add("Cal Raijin Taiko");
-        if (mPerformerNames.contains(name)){
+        if (PERFORMER_SET.contains(name)){
             return R.drawable.music;
         }
         return R.drawable.speaker;

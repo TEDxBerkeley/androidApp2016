@@ -1,4 +1,4 @@
-package org.tedxberkeley.www.tedxberkeley;
+package org.tedxberkeley.www.tedxberkeley2016;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -16,10 +16,10 @@ import android.view.MenuItem;
 import android.net.Uri;
 import android.view.View;
 
-import org.tedxberkeley.www.tedxberkeley.About.AboutFragment;
-import org.tedxberkeley.www.tedxberkeley.Schedule.ScheduleFragment;
-import org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment;
-import org.tedxberkeley.www.tedxberkeley.Views.TabsPagerAdapter;
+import org.tedxberkeley.www.tedxberkeley2016.About.AboutFragment;
+import org.tedxberkeley.www.tedxberkeley2016.Schedule.ScheduleFragment;
+import org.tedxberkeley.www.tedxberkeley2016.Speakers.SpeakerListFragment;
+import org.tedxberkeley.www.tedxberkeley2016.Views.TabsPagerAdapter;
 
 
 public class MainActivity extends ActionBarActivity implements SpeakerListFragment.OnFragmentInteractionListener,

@@ -1,4 +1,4 @@
-package org.tedxberkeley.www.tedxberkeley.Schedule;
+package org.tedxberkeley.www.tedxberkeley2016.Schedule;
 
 
 
@@ -7,12 +7,11 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.tedxberkeley.www.tedxberkeley.R;
+import org.tedxberkeley.www.tedxberkeley2016.R;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
 
@@ -147,27 +146,27 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 2);
+        endTime.add(Calendar.MINUTE, 30);
         endTime.set(Calendar.MONTH, newMonth-1);
-        event = new WeekViewEvent(1, "Wisdom    " +  "       UC Men's Octet \n" +
-                "                          Prasad Kaipa\n" +
-                "                          Adora Svitak\n" +
-                "                          Marc Gopin\n" +
-                "                          Carolyn Gable\n" +
-                "                          Eric Holt-Gimenez\n" +
-                "                          Dan Garcia\n" +
-                "                          Valerie Joi", startTime, endTime);
+        event = new WeekViewEvent(1, "Breaking the Fifth Wall " +  "       Celli@Berkeley \n" +
+                "                                                 Naveen Jain\n" +
+                "                                                 Jeromy Johnson\n" +
+                "                                                 Dr. Susan Lim\n" +
+                "                                                 Andrew Siemion\n" +
+                "                                                 Jacob Corn\n" +
+                "                                                 Kathy Calvin\n" +
+                "                                                 Sonia Rao", startTime, endTime);
         event.setColor(getResources().getColor(R.color.ted_red));
         events.add(event);
 
         startTime = Calendar.getInstance();
         startTime.set(Calendar.HOUR_OF_DAY, 12);
-        startTime.set(Calendar.MINUTE, 0);
+        startTime.set(Calendar.MINUTE, 30);
         startTime.set(Calendar.DAY_OF_MONTH, 6);
         startTime.set(Calendar.MONTH, newMonth-1);
         startTime.set(Calendar.YEAR, newYear);
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 1);
-        endTime.add(Calendar.MINUTE, 30);
         endTime.set(Calendar.MONTH, newMonth - 1);
         event = new WeekViewEvent(1, "Lunch", startTime, endTime);
         event.setColor(getResources().getColor(R.color.black));
@@ -183,13 +182,13 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime.add(Calendar.HOUR, 1);
         endTime.add(Calendar.MINUTE, 45);
         endTime.set(Calendar.MONTH, newMonth-1);
-        event = new WeekViewEvent(1, "Compassion   Cal Raijin Taiko\n" +
-                "                          Suzanne Ackerman-Berman\n" +
-                "                          Victoria Kisyombe\n" +
-                "                          Alison Meyer\n" +
-                "                          Mike Robbins\n" +
-                "                          Meera Shenoy\n" +
-                "                          Dan Viederman", startTime, endTime);
+        event = new WeekViewEvent(1, "Untold                                    UC Berkeley Azaad\n" +
+                "                                                 Christopher Ategeka\n" +
+                "                                                 Ellen Petry Leanse\n" +
+                "                                                 Isha Ray\n" +
+                "                                                 Joshua Toch\n" +
+                "                                                 Rev. Deborah Johnson\n" +
+                "                                                 OSA Chamber Choir", startTime, endTime);
         event.setColor(getResources().getColor(R.color.ted_red));
         events.add(event);
 
@@ -214,12 +213,12 @@ public class ScheduleFragment extends Fragment implements WeekView.MonthChangeLi
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR, 1);
         endTime.add(Calendar.MINUTE, 30);
-        event = new WeekViewEvent(1, "Connection     Cal Bhangra\n" +
-                "                          Richmond Sarpong\n" +
-                "                          Emily Levine\n" +
-                "                          Eric Rasmussen\n" +
-                "                          Viviana Guzman\n" +
-                "                          Steve Wozniak\n", startTime, endTime);
+        event = new WeekViewEvent(1, "Eye of the Storm  " + "  Rose Gelfand, Molly Gardner, & Isabelle Ansari\n" +
+                "                                                 Dr. Sriram Shamasunder\n" +
+                "                                                 Aran Khanna\n" +
+                "                                                 Stephanie Freid\n" +
+                "                                                 John Koenig\n" +
+                "                                                 Rob Hotchkiss\n", startTime, endTime);
         event.setColor(getResources().getColor(R.color.ted_red));
         events.add(event);
 

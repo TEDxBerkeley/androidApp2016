@@ -1,4 +1,4 @@
-package org.tedxberkeley.www.tedxberkeley.Speakers;
+package org.tedxberkeley.www.tedxberkeley2016.Speakers;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import org.tedxberkeley.www.tedxberkeley.MainActivity;
-import org.tedxberkeley.www.tedxberkeley.R;
+import org.tedxberkeley.www.tedxberkeley2016.MainActivity;
+import org.tedxberkeley.www.tedxberkeley2016.R;
 
 import java.util.ArrayList;
 
@@ -26,8 +26,7 @@ public class SpeakerListFragment extends ListFragment {
 
 
     public static SpeakerListFragment newInstance() {
-        SpeakerListFragment fragment = new SpeakerListFragment();
-        return fragment;
+        return new SpeakerListFragment();
     }
 
     public SpeakerListFragment() {
@@ -39,8 +38,11 @@ public class SpeakerListFragment extends ListFragment {
 
         mSpeakerList.add(new Speaker("Christopher Ategeka", "Engineer and Social Entrepreneur", getString(R.string.ategeka_bio), R.drawable.ategeka));
         mSpeakerList.add(new Speaker("Kathy Calvin", "CEO of United Nations Foundation", getString(R.string.calvin_bio), R.drawable.calvin));
-        mSpeakerList.add(new Speaker("Jacob Corn", "Scientific Director if Innovative Genomics Initiative", getString(R.string.corn_bio), R.drawable.corn));
+        mSpeakerList.add(new Speaker("Jacob Corn", "Scientific Director of Innovative Genomics Initiative", getString(R.string.corn_bio), R.drawable.corn));
         mSpeakerList.add(new Speaker("Stephanie Freid", "International Conflicts Journalist", getString(R.string.freid_bio), R.drawable.freid));
+        mSpeakerList.add(new Speaker("Rose Gelfand", "OSA Poet", getString(R.string.rose_bio), R.drawable.rose));
+        mSpeakerList.add(new Speaker("Molly Gardner", "OSA Poet", getString(R.string.molly_bio), R.drawable.molly));
+        mSpeakerList.add(new Speaker("Isa Ansari", "OSA Poet", getString(R.string.isa_bio), R.drawable.isa));
         mSpeakerList.add(new Speaker("Rob Hotchkiss", "Musician", getString(R.string.hotchkiss_bio), R.drawable.hotchkiss));
         mSpeakerList.add(new Speaker("Naveen Jain", "Entrepreneur and Philanthropist", getString(R.string.jain_bio), R.drawable.jain));
         mSpeakerList.add(new Speaker("Jeromy Johnson", "Expert in EMF Exposure", getString(R.string.johnson_bio), R.drawable.johnson));

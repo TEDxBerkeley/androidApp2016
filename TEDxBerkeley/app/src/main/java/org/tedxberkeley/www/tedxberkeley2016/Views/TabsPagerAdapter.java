@@ -1,4 +1,4 @@
-package org.tedxberkeley.www.tedxberkeley.Views;
+package org.tedxberkeley.www.tedxberkeley2016.Views;
 
 /**
  * Created by maxwolffe on 1/13/15.
@@ -7,17 +7,12 @@ package org.tedxberkeley.www.tedxberkeley.Views;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.text.Layout;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
-import org.tedxberkeley.www.tedxberkeley.About.AboutFragment;
-import org.tedxberkeley.www.tedxberkeley.MainActivity;
-import org.tedxberkeley.www.tedxberkeley.R;
-import org.tedxberkeley.www.tedxberkeley.Schedule.ScheduleFragment;
-import org.tedxberkeley.www.tedxberkeley.Speakers.SpeakerListFragment;
+import org.tedxberkeley.www.tedxberkeley2016.About.AboutFragment;
+import org.tedxberkeley.www.tedxberkeley2016.MainActivity;
+import org.tedxberkeley.www.tedxberkeley2016.Schedule.ScheduleFragment;
+import org.tedxberkeley.www.tedxberkeley2016.Speakers.SpeakerListFragment;
 
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {

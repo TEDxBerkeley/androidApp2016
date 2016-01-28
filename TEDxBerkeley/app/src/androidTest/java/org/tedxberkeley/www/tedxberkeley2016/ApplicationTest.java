@@ -1,4 +1,4 @@
-package org.tedxberkeley.www.tedxberkeley;
+package org.tedxberkeley.www.tedxberkeley2016;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

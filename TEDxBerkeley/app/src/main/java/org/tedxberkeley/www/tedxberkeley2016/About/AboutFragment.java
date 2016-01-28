@@ -1,4 +1,4 @@
-package org.tedxberkeley.www.tedxberkeley.About;
+package org.tedxberkeley.www.tedxberkeley2016.About;
 
 
 
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.tedxberkeley.www.tedxberkeley.R;
+import org.tedxberkeley.www.tedxberkeley2016.R;
 
 /**
  * A simple {@link Fragment} subclass.
